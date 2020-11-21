@@ -1,0 +1,1 @@
+json.extract! calory, :user_id, :count, :id, :date

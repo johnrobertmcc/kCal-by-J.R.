@@ -1,20 +1,21 @@
 class Api::CaloriesController < ApplicationController
 
     def index
-        @controller = current_user.calories
+
+        @calories = current_user.calories
         render :index
     end
 
     def show
-        @calorie = Calorie.find(params[:id])
+        @calory = Calory.find(params[:id])
         render :show
     end
 
     def destroy
 
-        @calorie = Calorie.find(params[:id])
-        if !@calorie.destroy
-            render json: [@calorie.errors.full_messages], status: 422
+        @calory = Calory.find(params[:id])
+        if !@calory.destroy
+            render json: [@calory.errors.full_messages], status: 422
 
         else
             render :destroy
@@ -25,27 +26,27 @@ class Api::CaloriesController < ApplicationController
 
    
     def create
-        @calorie = Calorie.new(calorie_params)
+        @calory = Calory.new(calorie_params)
 
-        if @calorie.save
+        if @calory.save
             render 'api/calories/show'
         else  
-            render json: [@calorie.errors.full_messages], status: 422
+            render json: [@calory.errors.full_messages], status: 422
         end
         
     end
 
     def update
   
-        @calorie = Calorie.find(params[:id])
+        @calory = Calory.find(params[:id])
 
-        if @calorie.update(calorie_params)
+        if @calory.update(calorie_params)
 
             render "api/calories/show"
         
         else
 
-            render json: [@calorie.errors.full_messages], status: 422
+            render json: [@calory.errors.full_messages], status: 422
 
         end
     
@@ -54,7 +55,7 @@ class Api::CaloriesController < ApplicationController
     private
 
     def calorie_params
-        params.require(:calorie).permit(:user_id, :count, :date)
+        params.require(:calory).permit(:user_id, :count, :date)
     end
 
 

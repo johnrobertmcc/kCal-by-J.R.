@@ -1,1 +1,1 @@
-json.extract! @calorie, :id
+json.extract! @calory, :id
