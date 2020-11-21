@@ -3,8 +3,10 @@ import SignUpForm from './signup';
 import { signUp, logIn, logOut, removeErrors } from '../../actions/session_actions';
 
 
-const mSTP = ({errors}) => {
-    return { errors}
+const mSTP = (state, ownProps) => {
+    return { 
+        errors : state.errors,
+    }
 };
 
 const mDTP = dispatch => {

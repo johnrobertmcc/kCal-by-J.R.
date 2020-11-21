@@ -17,13 +17,18 @@ class HomePage extends React.Component {
 
     openModal(str){
         this.setState({
-            [str]: !this.state.[str]
+            [str]: true
         })
     }
 
     signUpModal(){
 
-        if(this.state.openSignUp && !this.state.openLogIn){
+        if(this.state.openSignUp){
+                 this.setState(
+                {
+                    openLogIn: false
+                }
+            )
             return (<div>
                 <SignUp />
             </div>)
@@ -33,7 +38,12 @@ class HomePage extends React.Component {
     }
 
     logInModal(){
-        if(this.state.openLogIn && !this.state.openSignUp){
+        if(this.state.openLogIn){
+            this.setState(
+                {
+                    openSignUp: false
+                }
+            )
             return (<div>
                 <LogIn />
             </div>)
@@ -45,7 +55,7 @@ class HomePage extends React.Component {
 
     closeModals(){
 
-        if(!this.state.openLogIn || !this.state.openSignUp){
+        if(this.state.openLogIn || this.state.openSignUp){
         this.setState(
             {
                 openLogIn: false,
@@ -72,7 +82,7 @@ class HomePage extends React.Component {
 
                     <div 
                     className={this.state.openSignUp ? 'home-opaque' : 'home-image'}
-                    // onClick={() => this.closeModals()}
+                    onClick={() => this.closeModals()}
                     >
                         {this.signUpModal()}
                         {this.logInModal()}
