@@ -11,12 +11,7 @@ class User < ApplicationRecord
     validates :height, presence: true
     validates :age, presence: true
 
-    has_many :notes
-    has_many :notebooks
-    has_many :tags
-
-    ##!!!! REMOVE !!!!!!
-
+    has_many :calories
 
     after_initialize :ensure_session_token
 

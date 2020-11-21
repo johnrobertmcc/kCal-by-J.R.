@@ -36,7 +36,7 @@ class SideBar extends React.Component {
                
                 <p>
                 Remaining kCal : <br></br>
-                <span className='stats'>3000</span>
+                <span className='stats'>{user.allotted}</span>
                 </p> 
             </div>
 
