@@ -1,0 +1,76 @@
+.header-homepage{
+    display: flex;
+    justify-content: space-between;
+}
+
+.line{
+    width: 80vw;
+}
+
+.head-session{
+
+}
+
+.footer-home{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.first-level{
+    /* display:flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+.home-image, .home-opaque{
+       background-image: url('nyc.jpg');
+       background-repeat: no-repeat;
+       background-size:cover;
+       height:100vh;
+       width:80%;  
+       padding-right: 10%;
+       padding-left: 10%;
+}
+
+.links.header {
+    text-decoration: none;
+    color: black;
+}
+
+.links.header.signup{
+    padding:10px;
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+.links.footer {
+    display: flex;
+    justify-content: space-around;
+}
+.links:hover{
+    color: green;
+    cursor:pointer;
+}
+
+.name{
+    text-align: center;
+}
+
+.created{
+    font-size:13px;
+}
+
+.logo{
+    font-size:20px;
+    display: inline;
+}
+
+.home-opaque img{
+    opacity:.3
+}
