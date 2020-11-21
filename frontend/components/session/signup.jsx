@@ -33,9 +33,9 @@ class SignUpForm extends React.Component {
 
         if(errors.length > 0){
             for(let i = 0; i < errors[0].length; i++){
-                debugger
+
                 if(errors[0][i].toLowerCase().includes(str)){
-                    debugger
+ 
                 return (
                     <div className='errors active'> {`invalid :(`}</div>
                 )

@@ -15,10 +15,11 @@ class HomePage extends React.Component {
         }
     }
 
-    openModal(str){
+    openModal(str1, str2){
         // e.preventDefault();
         this.setState({
-            [str]: true
+            [str1] : true,
+            [str2] : false
         })
     }
 
@@ -40,16 +41,6 @@ class HomePage extends React.Component {
 
     }
 
-    closeModals(){
-
-        if(this.state.openLogIn || this.state.openSignUp){
-        this.setState(
-            {
-                openLogIn: false,
-                openSignUp: false
-            }
-        )}
-    }
     render() {
     
         return(
@@ -59,8 +50,8 @@ class HomePage extends React.Component {
                     <p>kCal by <a href='https://johnrobertmcc.com' target='_blank' className='links header'>J.R.</a></p>
                    </div>
                    <div className='head-session'>
-                        <div onClick={() => this.openModal('openSignUp')}className='links header signup'>Sign Up </div>
-                        <div className='links header signup' onClick={() => this.openModal('openLogIn')}>Log In</div>
+                        <div onClick={() => this.openModal('openSignUp', 'openLogIn')}className='links header signup'>Sign Up </div>
+                        <div className='links header signup' onClick={() => this.openModal('openLogIn', 'openSignUp')}>Log In</div>
                    </div>
                </div>
 
@@ -69,7 +60,6 @@ class HomePage extends React.Component {
 
                     <div 
                     className={this.state.openSignUp ? 'home-opaque' : 'home-image'}
-                    // onClick={() => this.closeModals()}
                     >
                         {this.signUpModal()}
                         {this.logInModal()}

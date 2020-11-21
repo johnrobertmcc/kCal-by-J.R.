@@ -1,11 +1,9 @@
 import { connect } from 'react-redux';
-import SideBar from './sidebar';
+import Counter from './counter';
 
 
 const mSTP = (state, ownProps) => {
-
     return { 
-        user: state.entities.users[state.session.id],
         errors : state.errors,
     }
 };
@@ -21,4 +19,4 @@ const mDTP = dispatch => {
     
 };
 
-export default connect(mSTP, mDTP)(SideBar);
+export default connect(mSTP, mDTP)(Counter);

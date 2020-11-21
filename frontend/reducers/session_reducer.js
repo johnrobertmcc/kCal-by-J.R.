@@ -4,24 +4,18 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_SESSION_ERRORS } fro
 const _default = { id: null };
 
 const sessionReducer = (state = _default, action) => {
-    debugger
+ 
     Object.freeze(state);
     
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return { id: action.currentUser.id };
+            return Object.assign({}, state, { id: action.currentUser.id });
         case LOGOUT_CURRENT_USER:
 
             return _default;
 
         case RECEIVE_SESSION_ERRORS:
-            debugger
-            if(typeof action.errors !== 'undefined'){
             return action.errors;
-        }else{
-            return _default
-        }
-
         default:
             return state;
     }

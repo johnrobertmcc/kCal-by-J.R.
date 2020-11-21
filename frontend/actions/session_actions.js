@@ -7,10 +7,12 @@ export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const REMOVE_ERRORS = 'REMOVE_ERRORS';
 
-const receiveCurrentUser = currentUser => ({ //pojo goes to reducer --always pass in actin to dispatch
+const receiveCurrentUser = currentUser => { //pojo goes to reducer --always pass in actin to dispatch
+    return{
     type: RECEIVE_CURRENT_USER,
     currentUser
-});
+}
+};
 
 const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
@@ -21,12 +23,12 @@ export const signUp = user => dispatch => {
    error => dispatch(receiveErrors(error.responseJSON)));
 };
     
-export const logIn = user => dispatch => (
-
+export const logIn = user => dispatch => {
+    return(
     PostApiUtil.logIn(user).then(user => (dispatch(receiveCurrentUser(user))),
         error => dispatch(receiveErrors(error.responseJSON))
-)
-)
+))
+}
 
 export const logOut = () => dispatch => {
  
@@ -34,7 +36,6 @@ export const logOut = () => dispatch => {
 };
 
 const receiveErrors = errors => {
-    debugger
     return{
     type: RECEIVE_SESSION_ERRORS,
     errors}
