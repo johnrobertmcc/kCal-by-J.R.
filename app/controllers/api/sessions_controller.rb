@@ -14,7 +14,7 @@ class Api::SessionsController < ApplicationController
             render 'api/users/show'
 
         else
-             render json: [@session.errors.full_messages], status: 422
+             render json: ["Something isn't quite right :("], status: 422
         end
 
     

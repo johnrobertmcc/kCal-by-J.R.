@@ -79,18 +79,7 @@ class LogInForm extends React.Component {
                               <br></br>
                           
                             <button type='submit' className='signup-button'> Continue </button>
-                        <p className='redirect'>Want to sign up?</p>
-                   <Link to={{
-                                pathname:`/`,
-                                state: 
-                                {
-                                    toLogIn: true
-                                }
-                            }}
-                            >
-                                Sign Up
 
-                    </Link>  
                     </form>
                 <div className='modal-background'>
                 </div>

@@ -33,10 +33,12 @@ export const logOut = () => dispatch => {
     return PostApiUtil.logOut().then(() => (dispatch(logoutCurrentUser())))
 };
 
-const receiveErrors = errors => ({
+const receiveErrors = errors => {
+    debugger
+    return{
     type: RECEIVE_SESSION_ERRORS,
-    errors
-});
+    errors}
+};
 
 export const removeErrors = () => ({
     type: REMOVE_ERRORS

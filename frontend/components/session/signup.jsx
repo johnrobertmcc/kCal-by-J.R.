@@ -190,8 +190,7 @@ class SignUpForm extends React.Component {
 
                             
                             <button type='submit' className='signup-button'> Continue </button>
-                        <p className='redirect'>Already have an account?</p>
-                    <Link to='/'className='links session'>Sign in</Link>
+ 
                     </form>
                 <div className='modal-background'>
                 </div>
