@@ -1,5 +1,7 @@
 class Api::CaloriesController < ApplicationController
 
+
+        skip_before_action :verify_authenticity_token
     def index
 
         @calories = current_user.calories
@@ -27,10 +29,13 @@ class Api::CaloriesController < ApplicationController
    
     def create
         @calory = Calory.new(calorie_params)
+        debugger
 
         if @calory.save
+            debugger
             render 'api/calories/show'
-        else  
+        else 
+            debugger 
             render json: [@calory.errors.full_messages], status: 422
         end
         
@@ -55,7 +60,7 @@ class Api::CaloriesController < ApplicationController
     private
 
     def calorie_params
-        params.require(:calory).permit(:user_id, :count, :date)
+        params.require(:calory).permit(:count, :date, :user_id, :meal)
     end
 
 

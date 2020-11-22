@@ -2,5 +2,37 @@
     width: 80vw;
     height:100%;
     border: 1px solid pink;
+    display:flex;
+    flex-direction: column;
 
 }
+
+.dashboard{
+    height: 10%;
+    border: 1px solid black;
+}
+
+.flex-counter{
+    display: flex;
+    justify-content: space-around;
+    height: 90%;
+    width: 100%;
+    margin-top:5%
+}
+
+.eats{
+    height: 90%;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.kcal-form{
+        height: 90%;
+    border: 1px solid black;
+    width: 50%;
+}
+

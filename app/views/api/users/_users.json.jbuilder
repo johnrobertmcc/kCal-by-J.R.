@@ -1,1 +1,1 @@
-json.extract! user, :id, :email, :fname, :lname, :age, :weight, :height, :allotted
+json.extract! user, :id, :email, :fname, :lname, :age, :weight, :height, :allotted, :calories

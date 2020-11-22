@@ -1,20 +1,21 @@
 import { connect } from 'react-redux';
 import Counter from './counter';
+import {createCalory, deleteCalory, updateCalory, fetchCalories} from '../../../actions/calory_actions';
 
 
 const mSTP = (state, ownProps) => {
     return { 
-        errors : state.errors,
+        calories: state.entities.calories,
     }
 };
 
 const mDTP = dispatch => {
 
     return { 
-            signUp : user => dispatch(signUp(user)),
-            logIn : user => dispatch(logIn(user)),
-            logOut : user => dispatch(logOut(user)),
-            removeErrors: () => dispatch(removeErrors())
+          createCalorie : calory => dispatch(createCalory(calory)),
+          deleteCalorie : caloryId => dispatch(deleteCalory(caloryId)),
+          updateCalory : calory => dispatch(updateCalory(calory)),
+          fetchCalories : userId => dispatch(fetchCalories(userId)),
         };
     
 };
