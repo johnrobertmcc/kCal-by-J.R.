@@ -19,6 +19,9 @@ class Counter extends React.Component {
         this.filterkCal = this.filterkCal.bind(this);
     }
 
+    componentDidMount(){
+        this.props.fetchCalories(this.props.userId)
+    }
 
     componentDidUpdate(prevProps){
         if(prevProps.date !== this.props.date || prevProps.calories.length !== this.props.calories.length){
@@ -42,7 +45,6 @@ class Counter extends React.Component {
         let {date} = this.props;
 
         this.props.calories.map(entity => {
-            debugger
             let temp = new Date(entity.date)
             temp.setDate(temp.getDate() + 1);
             temp = temp.toDateString()

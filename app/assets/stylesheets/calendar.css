@@ -1,0 +1,21 @@
+.react-calendar__navigation > *{
+    border:none;
+    font-size: 20px;
+    background: none;
+}
+
+.react-calendar__month-view__days > *{
+    border:none;
+    height:2%;
+    background:none;
+    padding:1%;
+}
+
+.react-calendar__month-view__days > button:hover, button:active{
+    cursor:pointer;
+    border:1px solid rgba(152, 197, 152, 0.487);
+}
+
+.react-calendar{
+    border:1px solid rgba(113, 196, 113, 0.631);
+}

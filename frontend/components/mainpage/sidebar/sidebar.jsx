@@ -26,7 +26,7 @@ class SideBar extends React.Component {
     calculateCal(){
         let BMR;
         BMR = (66 + (6.3*this.props.user.weight) + (12.9*this.props.user.height) - (6.8 * this.props.user.age))
-        return BMR;
+        return BMR * 1.55;
     }
 
     logOut(){
@@ -67,6 +67,8 @@ class SideBar extends React.Component {
                     <p>
                     Goal : <br></br>
                     <span className='stats'>{this.calculateCal()} kCal</span>
+                       <br></br>
+                        <p className='italic'>this is calculated based on your BMR, and assumes that you exercise 3-5 times a week :)</p>
                     </p> 
                 </div>
 
