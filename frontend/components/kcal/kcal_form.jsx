@@ -34,7 +34,7 @@ class KcalForm extends React.Component {
   render() {
 
     return (
-      <div>
+       <div className='kcal-form'>
         <h3>{this.props.formType}</h3>
         <form onSubmit={this.handleSubmit}>
       
@@ -44,6 +44,7 @@ class KcalForm extends React.Component {
               value={this.state.count}
               onChange={this.update('count')}
             />
+            <br></br>
    
             <select
               value={this.state.meal}
@@ -55,8 +56,9 @@ class KcalForm extends React.Component {
               <option value="Dinner"> Dinner </option>
               <option value="Snacks"> Snacks </option>
             </select>
+            <br></br>
 
-          <button type='submit' value={this.props.formType} />
+          <button type='btn submit' value={this.props.formType}>Submit</button>
         </form>
       </div>
     );

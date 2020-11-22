@@ -65,6 +65,14 @@ class Counter extends React.Component {
 
     }
 
+    sumClass(){
+        if((this.sumDaily() - this.props.allotted)*-1 > this.props.allotted){
+            return 'red'
+        }else{
+            return 'green'
+        }
+    }
+
 
     render() {
         return(
@@ -82,6 +90,13 @@ class Counter extends React.Component {
             <div className='flex-counter'>
 
                 <div className='eats'>
+                    <div className='total'>
+                        <h3>Total kCal</h3>
+                        <p className={this.sumClass()}>{(this.sumDaily() - this.props.allotted)*-1}</p>
+                    </div>
+
+                    <hr className='line total'>
+                    </hr>
         
                     <div>
                     <h3>Breakfast</h3>
@@ -106,9 +121,8 @@ class Counter extends React.Component {
                 
                 </div>
 
-                <div className='kcal-form'>
+               
                     <CreateKcal date={this.props.date}/>
-                </div>
             </div>
 
         </div>
