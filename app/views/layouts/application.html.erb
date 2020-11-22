@@ -7,6 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <meta property="og:title" content="kCal by J.R." />
+      <meta name='image' property='og:image' content="<%=image_url('kcal-intro.gif')%>"/>
+      <meta 
+        property="og:url"
+        content="https://kcalbyjr.herokuapp.com/"
+     />
+      <meta 
+        property="og:description"
+        content="kCal: a simple way to keep track of one's daily caloric needs."
+      />
   
    <%= favicon_link_tag asset_path("favicon-32x32.png") %>
     <%# app/assets/images/favicon-16x16.png %>
