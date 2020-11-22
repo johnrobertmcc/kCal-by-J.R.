@@ -15,6 +15,7 @@ const receiveCurrentUser = currentUser => { //pojo goes to reducer --always pass
 };
 
 export const updateUser = user => dispatch => {
+    debugger
     return PostApiUtil.updateUser(user).then(user => dispatch(receiveCurrentUser(user)));
 };
 
