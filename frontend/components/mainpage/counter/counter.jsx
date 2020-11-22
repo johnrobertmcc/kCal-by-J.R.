@@ -83,7 +83,7 @@ class Counter extends React.Component {
                 </div>
 
                 <div className='remaining-kcal'>
-                    Remaining kCal : {this.sumDaily()}
+                    <span className='remain' >Remaining kCal :<p className={this.sumClass()}>{this.sumDaily()}</p></span> 
                 </div>
             </div>
 

@@ -11,7 +11,7 @@ const mSTP = (state, ownProps) => {
     allotted = ownProps.allotted ? ownProps.allotted : 2500
     let userId = ownProps.user.id
     return { 
-        calories: Object.values(state.entities.calories),
+        calories: Object.values(state.entities.users[userId].calories),
         date,
         allotted,
         userId

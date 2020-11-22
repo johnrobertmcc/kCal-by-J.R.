@@ -36,7 +36,8 @@ class KcalForm extends React.Component {
     return (
        <div className='kcal-form'>
         <h3>{this.props.formType}</h3>
-        <form onSubmit={this.handleSubmit}>
+        <hr className='line total'></hr>
+        <form onSubmit={this.handleSubmit} className='form'>
       
             <input
               placeholder='How many kCal?'

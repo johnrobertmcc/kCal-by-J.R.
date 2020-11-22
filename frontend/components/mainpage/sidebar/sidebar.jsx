@@ -29,6 +29,13 @@ class SideBar extends React.Component {
         return BMR;
     }
 
+    logOut(){
+        this.props.logOut().then(res => {
+
+            window.location.reload(false)
+        })
+    }
+
 
     render() {
         let {user, logOut} = this.props;
@@ -38,7 +45,7 @@ class SideBar extends React.Component {
             <div className='sidebar-container'>
                 <div className='user-info'>
                     Welcome back {user.fname}!
-                    <button onClick={logOut} className='btn logOut'>Log Out</button>
+                    <button onClick={() => this.logOut()} className='btn logOut'>Log Out</button>
                 </div>
 
                 <div className='calendar'>

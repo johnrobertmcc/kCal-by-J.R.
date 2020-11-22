@@ -6,11 +6,11 @@ const CaloriesReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CALORY:
-            return Object.assign({}, state, {[action.calory.id] : action.calory});
+            return {[action.calory.id] : action.calory};
         
         case RECEIVE_ALL_CALORIES:
 
-            return Object.assign({}, state, action.calories)
+            return action.calories
 
         case REMOVE_CALORY:
             const temp = Object.assign({}, state)
