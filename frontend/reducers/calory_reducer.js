@@ -6,10 +6,8 @@ const CaloriesReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CALORY:
-            debugger
             const temp = action.calory;
             temp.date = temp.date.split('-').reverse().join('/');
-            debugger
             return {[temp.id] : temp};
         
         case RECEIVE_ALL_CALORIES:

@@ -42,7 +42,10 @@ class Counter extends React.Component {
         let {date} = this.props;
 
         this.props.calories.map(entity => {
-            let temp = new Date(entity.date).toDateString();
+            debugger
+            let temp = new Date(entity.date)
+            temp.setDate(temp.getDate() + 1);
+            temp = temp.toDateString()
             if(entity.meal == meal && date == temp){
                 list[meal] = list[meal] + entity.count;
             }
