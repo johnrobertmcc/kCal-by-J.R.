@@ -9,7 +9,7 @@ const MainPage = () => {
     return (
         <div className='mainpage'>
             <SideBar />
-            <Counter />
+            {/* <Counter /> */}
         </div>
     )
 };

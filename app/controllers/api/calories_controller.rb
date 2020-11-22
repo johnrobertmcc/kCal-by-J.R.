@@ -29,13 +29,12 @@ class Api::CaloriesController < ApplicationController
    
     def create
         @calory = Calory.new(calorie_params)
-        debugger
 
         if @calory.save
-            debugger
+
             render 'api/calories/show'
         else 
-            debugger 
+
             render json: [@calory.errors.full_messages], status: 422
         end
         

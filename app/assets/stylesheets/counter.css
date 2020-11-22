@@ -36,3 +36,11 @@
     width: 50%;
 }
 
+.meal-ul{
+    list-style: none;
+}
+
+
+.mainpage-container{
+    display:flex;
+}

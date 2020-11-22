@@ -4,8 +4,17 @@ import {createCalory, deleteCalory, updateCalory, fetchCalories} from '../../../
 
 
 const mSTP = (state, ownProps) => {
+    let date;
+    let allotted;
+
+    date = ownProps.date ? ownProps.date : new Date().toLocaleDateString()
+    allotted = ownProps.allotted ? ownProps.allotted : 2500
+    let userId = ownProps.user.id
     return { 
-        calories: state.entities.calories,
+        calories: Object.values(state.entities.calories),
+        date,
+        allotted,
+        userId
     }
 };
 

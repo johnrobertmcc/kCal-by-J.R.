@@ -22,7 +22,7 @@ export const fetchCalories = (userId) => dispatch => {
 };
 
 const receiveCalory = calory => {
-    debugger
+
     return (
         {
             type: RECEIVE_CALORY,
@@ -36,7 +36,7 @@ export const fetchCalory = caloryId => dispatch => {
 };
 
 export const createCalory = calory => dispatch => {
-    debugger
+
     return CaloryUtil.createCalory(calory).then(calory =>dispatch(receiveCalory(calory)));
 };
 

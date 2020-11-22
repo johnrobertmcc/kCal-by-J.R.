@@ -3,15 +3,17 @@ import KcalForm from './kcal_form';
 import { createCalory } from '../../actions/calory_actions';
 
 
-const mapStateToProps = state => ({
-  kcal: {
+const mapStateToProps = (state, ownProps) => {
+  debugger
+  return(
+  {kcal: {
     count: '',
-    date: '',
+    date: ownProps.date,
     user_id: state.entities.users[state.session.id].id,
     meal: ''
   },
-  formType: 'Create'
-});
+  formType: 'Add New'}
+)};
 
 const mapDispatchToProps = dispatch => ({
   action: calory => dispatch(createCalory(calory))
