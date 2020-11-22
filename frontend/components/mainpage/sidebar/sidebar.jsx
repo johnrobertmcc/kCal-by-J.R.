@@ -11,10 +11,13 @@ class SideBar extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            date: new Date().toDateString()
+            date: new Date().toDateString(),
+            user: this.props.user,
+            update: false
         }
 
-        this.onChange = this.onChange.bind(this)
+        this.onChange = this.onChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     onChange(date){
@@ -37,8 +40,29 @@ class SideBar extends React.Component {
     }
 
 
+    handleSubmit(e) {
+        e.preventDefault();
+        debugger
+
+        this.props.updateUser(this.state.user);
+        this.setState({
+        user: this.props.user,
+        update: false
+        })
+    }
+
+    handler(){
+        this.setState({update:true})
+    }
+
+    update(field) {
+        debugger
+        return e => this.state.user.weight = e.currentTarget.value;
+    }
+
+
     render() {
-        let {user, logOut} = this.props;
+        let {user} = this.props;
 
         return(
         <div className='mainpage-container'>
@@ -59,10 +83,21 @@ class SideBar extends React.Component {
                     Today
                     </h3> 
                     
-                    <p>
+                    <div>
                         Weight: <br></br>
-                        <span className='stats'>{user.weight} lb</span>
-                    </p> 
+                        <span className='stats' onDoubleClick={() => this.handler()}>
+                            {
+                        this.state.update ? 
+                        <form onSubmit={this.handleSubmit} >
+                            <input type='number' placeholder={this.state.user.weight} onChange={this.update('weight')} className='weight-input'></input>
+                            <button className='weight-btn'>Edit</button>
+                        </form> 
+                        
+                        : user.weight
+                        } 
+                        
+                        lb</span>
+                    </div> 
                 
                     <p>
                     Goal : <br></br>

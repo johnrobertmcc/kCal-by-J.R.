@@ -7,6 +7,22 @@
     margin: 0;
 }
 
+.weight-input{
+    width: 17%;
+    border:none;
+    outline:none;
+
+}
+
+.weight-btn{
+    outline: none;
+    border: none;
+    opacity: 0.9;
+    color: rgb(57, 89, 57);
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid rgba(119, 187, 150, 0.713);
+}
 
 .sidebar-container{
     height:100%;

@@ -14,6 +14,10 @@ const receiveCurrentUser = currentUser => { //pojo goes to reducer --always pass
 }
 };
 
+export const updateUser = user => dispatch => {
+    return PostApiUtil.updateUser(user).then(user => dispatch(receiveCurrentUser(user)));
+};
+
 const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
 });
