@@ -21,7 +21,7 @@ class Counter extends React.Component {
 
 
     componentDidUpdate(prevProps){
-        if(prevProps.date !== this.props.date){
+        if(prevProps.date !== this.props.date || prevProps.calories.length !== this.props.calories.length){
             this.setState({
                 breakfast : this.filterkCal("Breakfast"),
                 lunch : this.filterkCal("Lunch"),
