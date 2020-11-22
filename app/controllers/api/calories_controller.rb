@@ -30,6 +30,7 @@ class Api::CaloriesController < ApplicationController
     def create
         @calory = Calory.new(calorie_params)
 
+
         if @calory.save
 
             render 'api/calories/show'

@@ -6,6 +6,7 @@ const CaloriesReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CALORY:
+            debugger
             return {[action.calory.id] : action.calory};
         
         case RECEIVE_ALL_CALORIES:

@@ -4,10 +4,11 @@ import { createCalory } from '../../actions/calory_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
   return(
   {kcal: {
     count: '',
-    date: ownProps.date,
+    date: new Date(ownProps.date),
     user_id: state.entities.users[state.session.id].id,
     meal: ''
   },

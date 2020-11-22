@@ -28,7 +28,10 @@ class Counter extends React.Component {
                 dinner : this.filterkCal("Dinner"),
                 snacks : this.filterkCal("Snacks"),
             })
+        }
 
+        if(prevProps.allKCal.length !== this.props.allKCal.length){
+            this.props.fetchCalories(this.props.userId)
         }
     }
 

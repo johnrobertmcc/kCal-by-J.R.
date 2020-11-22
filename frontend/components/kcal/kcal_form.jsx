@@ -4,16 +4,16 @@ class KcalForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.kcal;
-
+    debugger
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidUpdate(prevProps){
     if(prevProps.date !== this.props.date){
       let {date} = this.props;
+      debugger
       this.setState({
-        date
-
+        date : new Date(date)
       })
     }
   }
@@ -21,7 +21,11 @@ class KcalForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     this.props.action(this.state);
+    this.setState(
+     this.props.kcal
+     )
 
   }
 
