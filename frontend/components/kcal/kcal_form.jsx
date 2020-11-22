@@ -6,7 +6,6 @@ class KcalForm extends React.Component {
     this.state = this.props.kcal;
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    debugger
   }
 
   componentDidUpdate(prevProps){
@@ -22,7 +21,6 @@ class KcalForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.props.action(this.state);
 
   }

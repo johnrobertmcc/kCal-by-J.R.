@@ -4,7 +4,6 @@ import { createCalory } from '../../actions/calory_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return(
   {kcal: {
     count: '',

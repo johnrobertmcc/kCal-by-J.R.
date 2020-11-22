@@ -18,7 +18,7 @@ class SideBar extends React.Component {
     }
 
     onChange(date){
-        debugger
+    
         this.setState({date: date.toLocaleDateString()})
     }
 

@@ -54,7 +54,7 @@ const removeCalory = ({id}) => {
     )
 };
 
-export const deleteCalory = caloryId => dispatch => {
+export const deleteCalorie = caloryId => dispatch => {
 
-    return CaloryUtil.deleteCalory(caloryId).then(calory=> dispatch(removeCalory(calory)))
+    return CaloryUtil.deleteCalorie(caloryId).then(calory=> dispatch(removeCalory(calory)))
 };

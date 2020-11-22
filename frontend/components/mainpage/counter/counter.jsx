@@ -17,7 +17,6 @@ class Counter extends React.Component {
 
         this.sumDaily = this.sumDaily.bind(this);
         this.filterkCal = this.filterkCal.bind(this);
-        debugger
     }
 
 
