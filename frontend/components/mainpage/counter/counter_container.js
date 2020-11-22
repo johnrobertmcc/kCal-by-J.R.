@@ -7,7 +7,7 @@ const mSTP = (state, ownProps) => {
     let date;
     let allotted;
 
-    date = ownProps.date ? ownProps.date : new Date().toLocaleDateString()
+    date = ownProps.date ? ownProps.date : new Date().toDateString()
     allotted = ownProps.allotted ? ownProps.allotted : 2500
     let userId = ownProps.user.id
     return { 

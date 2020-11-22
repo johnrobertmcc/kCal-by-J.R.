@@ -7,7 +7,6 @@ export const REMOVE_CALORY = 'REMOVE_CALORY';
 
 const receiveAllCalories= (calories) =>{
 
-    debugger
     return(
         {
             type: RECEIVE_ALL_CALORIES,
@@ -18,7 +17,6 @@ const receiveAllCalories= (calories) =>{
 
 
 export const fetchCalories = (userId) => dispatch => {
-    debugger
 
     return CaloryUtil.fetchCalories(userId).then(calories => dispatch(receiveAllCalories(calories)));
 };

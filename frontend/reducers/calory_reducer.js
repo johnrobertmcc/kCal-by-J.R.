@@ -7,16 +7,19 @@ const CaloriesReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_CALORY:
             debugger
-            return {[action.calory.id] : action.calory};
+            const temp = action.calory;
+            temp.date = temp.date.split('-').reverse().join('/');
+            debugger
+            return {[temp.id] : temp};
         
         case RECEIVE_ALL_CALORIES:
 
             return action.calories
 
         case REMOVE_CALORY:
-            const temp = Object.assign({}, state)
-            delete temp[action.caloryId];
-            return temp;
+            const test = Object.assign({}, state)
+            delete test[action.caloryId];
+            return test;
 
         default:
             return state;

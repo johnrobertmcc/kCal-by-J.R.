@@ -42,7 +42,7 @@ class Counter extends React.Component {
         let {date} = this.props;
 
         this.props.calories.map(entity => {
-            let temp = new Date(entity.date).toLocaleDateString();
+            let temp = new Date(entity.date).toDateString();
             if(entity.meal == meal && date == temp){
                 list[meal] = list[meal] + entity.count;
             }

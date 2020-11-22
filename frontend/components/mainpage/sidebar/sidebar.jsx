@@ -11,7 +11,7 @@ class SideBar extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            date: new Date().toLocaleDateString()
+            date: new Date().toDateString()
         }
 
         this.onChange = this.onChange.bind(this)
@@ -19,7 +19,7 @@ class SideBar extends React.Component {
 
     onChange(date){
     
-        this.setState({date: date.toLocaleDateString()})
+        this.setState({date: date.toDateString()})
     }
 
     //  66 + (6.3 x body weight in lbs.) + (12.9 x height in inches) - (6.8 x age in years) = BMR

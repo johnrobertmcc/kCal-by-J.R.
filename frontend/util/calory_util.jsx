@@ -11,7 +11,6 @@ export const fetchCalory = (calory) => {
 
 
 export const fetchCalories = (userId) => {
-    debugger
     return $.ajax(
         {
             url: `/api/users/${userId}/calories`,
