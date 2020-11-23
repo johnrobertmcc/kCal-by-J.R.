@@ -21,8 +21,23 @@ module.exports = {
                         presets: ['@babel/env', '@babel/react']
                     }
                 },
+            },
+              {
+                test: /\.css$/,
+                use: [
+                {
+                        loader: MiniCssExtractPlugin.loader,
+
+                    },
+                   'css-loader'
+                ]
             }
         ]
     },
+     plugins: [
+        new MiniCssExtractPlugin({
+            filename:'[name].css',
+        })
+    ],
     devtool: 'source-map'
 };
