@@ -27,8 +27,8 @@
     color: black;
 }
 
-.home-image, .home-opaque{
-       background-image: url('nyc.jpg');
+.home-image{
+        background-image: url('nyc.jpg');
        background-repeat: no-repeat;
        background-size:cover;
        height:100vh;
