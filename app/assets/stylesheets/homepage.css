@@ -27,7 +27,7 @@
     color: black;
 }
 
-.home-image{
+.home-image, .home-opacity{
         background-image: url('nyc.jpg');
        background-repeat: no-repeat;
        background-size:cover;
