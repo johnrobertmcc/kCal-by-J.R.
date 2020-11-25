@@ -59,7 +59,7 @@ class HomePage extends React.Component {
                <div className='first-level'>
 
                     <div 
-                    className={this.state.openSignUp ? 'home-opaque' : 'home-image'}
+                    className='home-image'
                     >
                         {this.signUpModal()}
                         {this.logInModal()}
