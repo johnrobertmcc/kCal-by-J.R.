@@ -9,7 +9,6 @@ const MainPage = () => {
     return (
         <div className='mainpage'>
             <SideBar />
-            {/* <Counter /> */}
         </div>
     )
 };
