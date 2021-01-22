@@ -1,25 +1,24 @@
-# kCal by J.R.
+# README
 
-A minimalist way to track and log one's daily caloric needs.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-[Try kCal by J.R.](http://kcalbyjr.herokuapp.com/#/)
+Things you may want to cover:
 
-## Technology Stack
+* Ruby version
 
-<hr></hr>
+* System dependencies
 
-**Ruby on Rails**
+* Configuration
 
+* Database creation
 
-**React/Redux**
+* Database initialization
 
+* How to run the test suite
 
-**React-Calendar**
-<hr></hr>
+* Services (job queues, cache servers, search engines, etc.)
 
+* Deployment instructions
 
-## Features
-
-#### Log
-
-Allows the user to log her/his calories under a specified date, and see their remaining, daily allotted calories
+* ...
